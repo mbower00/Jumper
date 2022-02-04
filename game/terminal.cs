@@ -39,7 +39,8 @@ namespace cse210_jumper.game{
         /// <summary>
         /// Recives the status from Jumper and prints out the status (letters in green and underscores in red) and a blank line
         /// </summary>
-        public void DisplayStatus(){
+        /// <param name="jumper">The instance of jumper from the Director class</param>
+        public void DisplayStatus(Jumper jumper){
             foreach (string i in jumper.GetStatus()){
                 if (i == "_"){
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -60,7 +61,8 @@ namespace cse210_jumper.game{
         /// <summary>
         /// Recieves the chute damage from Jumper and prints the scene (with current chute (magenta in color), living/dead jumper (cyan in color), the ground (dark green in color), and a blank line)
         /// </summary>
-        public void DisplayScene(){
+        /// <param name="jumper">The instance of jumper from the Director class</param>
+        public void DisplayScene(Jumper jumper){
             if (jumper.GetChuteDamage() == 0){
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine(chuteLayer01);
