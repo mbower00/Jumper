@@ -60,8 +60,8 @@ namespace cse210_jumper.game{
     {
         Console.Writeline("")
     }  
-    44
-    
+    44 
+
 
     public void Continuegame()
     {
