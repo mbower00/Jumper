@@ -1,0 +1,24 @@
+Jumper:
+INSTANCIATE:
+    Set damage to 0
+    call secret word
+    convert to underscores
+    store in currentStatus list
+INTERAPTE GUESS:
+    recive user input from director
+    compare to list in puzzle
+    return true or false
+    
+updateStatus:
+    change underscore to letter based on INTERAPTE GUESS
+    
+getChuteDamage:
+
+getStatus
+
+
+recive secret word from puzzle.
+save secret word into a list
+translate secret word list into underscores
+
+
