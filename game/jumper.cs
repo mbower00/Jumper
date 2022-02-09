@@ -4,13 +4,51 @@ using System;
 
 namespace cse210_jumper.game{
     public class Jumper{
-        private int chuteDamage;
+        private int chuteDamage = 0;
         private List<string> currentStatus = new List[];
         
-        private bool interpretGuess(); // Compares secret word to input
-        public void updateStatus(); // Determines if input and secret code match  --  changes damage
-        public int getChuteDamage(); // return damage level
-        public list getStatus(); // contains data of the Underscores and Letters
+        private void setCurrentStatus(){  // letters in Current status = underlines
+            currentStatus = Puzzle.LettersNeeded;
+            // for i in currentStatus{
+                // currentStatus[i] = "_"
+            // }
+            
+            
+        }
+        public Jumper() // Is consturctor
+        {
+
+        }
+        private bool interpretGuess(){  // Compares secret word to input
+            // int temp = Puzzle.GetGuesses();
+            // currentStatus[temp] = Director.playerGuess
+
+            /*
+            Search Puzzle.LettersNeeded against Director.playerGuess
+            if Director.playerGuess == Puzzle.LettersNeeded {
+                return True
+            }
+            else{
+                return False 
+            }
+            */
+        } 
+        public void updateStatus(){  // Determines if input and secret code match  --  changes damage
+            // if interpretGuess == true{
+                // change currentStaus to Letters
+            // }
+            // else{
+                // chuteDamage +=;
+            // }
+            Puzzle.LettersNeeded;
+            Director.playerGuess;
+        } 
+        public int getChuteDamage(){  // return damage level
+            chuteDamage;
+        } 
+        public list getStatus(){  // contains data of the Underscores and Letters
+            currentStatus;
+        } 
     }
 }
 
