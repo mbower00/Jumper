@@ -32,20 +32,24 @@ namespace cse210_jumper.game{
     public class director{
         
         private string playerGuess = "0";
+        private Jumper jumper = new Jumper();
         private bool keepPlaying = true;
         private Puzzle puzzle = new Puzzle();
         private terminal terminal = new terminal();
         public void StartGame()
       {
           while(keepPlaying){
+              while(true){
               GetInputs();
               DoUpdates();
               DoOutputs();
+            }
+            ContinueGame();
           }
-          DoOutputs();
+          
 
 
-      }bing
+      }
         
         
         private void GetInputs(){
@@ -56,10 +60,23 @@ namespace cse210_jumper.game{
         private void DoUpdates()
         {
 
+            terminal.DisplayStatus(jumper)
+            terminal.DisplayScene(jumper)
         }
         private void DoOutputs(){
-
+            
+                else if (jumper.GetChuteDamage() == 5)
+                {
+                    terminal.DisplayLose()
+                    break;
+                } 
+                if !(jumper.GetStatus().Contains("_")){
+                    terminal.DisplayWin()
+                    break;
+                }
+            
             }
+
 
     
         private void ContinueGame()
