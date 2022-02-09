@@ -30,9 +30,50 @@ using Systems;
 
 namespace cse210_jumper.game{
     public class director{
-        string gameContinue = "y";
-        string playerGuess = 
-        bool gameEnding = true;
+        
+        private string playerGuess = "0";
+        private bool keepPlaying = true;
+        private Puzzle puzzle = new Puzzle();
+        private terminal terminal = new terminal();
+        public void StartGame()
+      {
+          while(keepPlaying){
+              GetInputs();
+              DoUpdates();
+              DoOutputs();
+          }
+          DoOutputs();
+
+
+      }bing
+        
+        
+        private void GetInputs(){
+            terminal.DisplayPrompt()
+            
+
+        }
+        private void DoUpdates()
+        {
+
+        }
+        private void DoOutputs(){
+
+            }
+
+    
+        private void ContinueGame()
+     {
+            terminal. DisplayContinue()
+
+        
+
+        }
+    
+     
+//string keepPlaying = Console.ReadLine(); // gets input and applys it to keepPlaying
+            //isPlaying = (keepPlaying == "y");
+            //Console.WriteLine(""); // print blank line
         
 
 
@@ -42,39 +83,7 @@ namespace cse210_jumper.game{
 
     }
 }
-     public void StartGame()
-      {
-
-      }
-    public void NewGuess()
-    {
-        
-    }
-    public bool IsSameGuess()
-    {
-        if (playerGuess()){
-
-        }
-    }
-    public void gameContinue()
-    {
-        Console.Writeline("")
-    }  
-    44 
-
-
-    public void Continuegame()
-    {
-        string keepPlaying = Console.ReadLine(); // gets input and applys it to keepPlaying
-            isPlaying = (keepPlaying == "y");
-            Console.WriteLine(""); // print blank line
-
-    }
-    
-    public void GameOutcome()
-    {
-
-    }
+     
    
    
 
