@@ -21,7 +21,7 @@ using Systems;
 //continuePlayChoice: string
 //playerGuess: char
 //gameEnding: bool
-//Methods:
+//Methods:  dws
 //ContinuePlay(): bool
 //NewGuess(): string
 //GameOutcome(): bool
