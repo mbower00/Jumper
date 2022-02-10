@@ -86,7 +86,7 @@ namespace cse210_jumper.game{
                     break;
                 }
             
-            }
+            }  
 
 
     
