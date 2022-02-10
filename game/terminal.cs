@@ -54,8 +54,8 @@ namespace cse210_jumper.game{
                 }
                 Console.Write(" ");
             }
-            Console.Writeline("");
-            Console.Writeline("");
+            Console.WriteLine("");
+            Console.WriteLine("");
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace cse210_jumper.game{
         /// </summary>
         public void DisplayWin(){
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.Writeline(winnerPrompt);
+            Console.WriteLine(winnerPrompt);
             Console.ForegroundColor = ConsoleColor.White; //set back to white
         }
 
@@ -142,7 +142,7 @@ namespace cse210_jumper.game{
         /// </summary>
         public void DisplayLose(){
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Writeline(hasLoser);
+            Console.WriteLine(hasLoser);
             Console.ForegroundColor = ConsoleColor.White; //set back to white
         }
 
@@ -150,7 +150,7 @@ namespace cse210_jumper.game{
         /// Displays the play again (aka continue) prompt text
         /// </summary>
         public void DisplayContinue(){
-            Console.Writeline(continuePrompt);
+            Console.WriteLine(continuePrompt);
         }
     }
 }

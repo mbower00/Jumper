@@ -9,12 +9,14 @@ INTERAPTE GUESS:
     compare to list in puzzle
     return true or false
     
-updateStatus:
+UPDATESTATUS:
     change underscore to letter based on INTERAPTE GUESS
     
-getChuteDamage:
+GETCHUTEDAMAGE:
+    Holds current damage status
 
-getStatus
+GETSTATUS:
+    holds current list of underscores and letters
 
 
 recive secret word from puzzle.
