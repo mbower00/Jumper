@@ -39,7 +39,7 @@ namespace cse210_jumper.game{
         private Puzzle puzzle = new Puzzle();
         private Terminal terminal = new Terminal();
         private bool isGaming;
-        private string playerContinueResponse;
+        private string playerContinueResponse = "";
 
 
         public void StartGame()
