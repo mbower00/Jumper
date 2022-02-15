@@ -5,52 +5,69 @@ using System;
 namespace cse210_jumper.game{
     public class Jumper{
         private int chuteDamage = 0;
-        private List<string> currentStatus = new List[];
+        private List<char> currentStatus = new List[];
+// ----------------------------------------------------------------------------------------------------------
         
-        private void setCurrentStatus(){  // letters in Current status = underlines
-            currentStatus = Puzzle.LettersNeeded;
-            // for i in currentStatus{
-                // currentStatus[i] = "_"
-            // }
-            
-            
+        
+        /// <summary>
+        /// This is the default constructor.
+        /// </summary>
+        public Jumper(){
         }
-        public Jumper() // Is consturctor
-        {
 
+
+        /// <summary>
+        /// Constructor that recieves a list of chars.  If this constructor is called, you do not need to call setNewJumper().
+        /// </summary>
+        public Jumper(list<char> chars){
+            setNewJumper(chars);
         }
-        private bool interpretGuess(){  // Compares secret word to input
-            // int temp = Puzzle.GetGuesses();
-            // currentStatus[temp] = Director.playerGuess
 
-            /*
-            Search Puzzle.LettersNeeded against Director.playerGuess
-            if Director.playerGuess == Puzzle.LettersNeeded {
-                return True
+
+        /// <summary>
+        /// Converts a new word to underscores, sets damage to 0
+        /// </summary>
+        public void setNewJumper(list<char> chars){
+            int x = 0;
+            foreach(char c in chars ){
+                currentStatus[x] = '_';
+                x++;
             }
+            chuteDamage = 0;
+        }
+
+
+        /// <summary>
+        /// Converts Underscore to letter, or deals damage
+        /// </summary>
+        private void setCurrentStatus(char guess, int pos){  // letters in Current status = underlines
+            if (pos != -1){
+                currentStsus[pos] = guess;
+            }      
             else{
-                return False 
+                chuteDamage++;
             }
-            */
-        } 
-        public void updateStatus(){  // Determines if input and secret code match  --  changes damage
-            // if interpretGuess == true{
-                // change currentStaus to Letters
-            // }
-            // else{
-                // chuteDamage +=;
-            // }
-            Puzzle.LettersNeeded;
-            Director.playerGuess;
-        } 
+        }
+
+
+        /// <summary>
+        /// Returns damage
+        /// </summary>
         public int getChuteDamage(){  // return damage level
-            chuteDamage;
+            return chuteDamage;
         } 
-        public list getStatus(){  // contains data of the Underscores and Letters
-            currentStatus;
+
+
+        /// <summary>
+        /// Returns mix of Underscores and guessed letters
+        /// </summary>
+        public list<char> getStatus(){  // contains data of the Underscores and Letters
+            return currentStatus;
         } 
     }
 }
+
+
 
 /*
 Attributes:

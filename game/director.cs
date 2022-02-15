@@ -43,6 +43,7 @@ namespace cse210_jumper.game{
         public void StartGame()
       {
           while(keepPlaying){ ///here we loop the whole game itself, after the conclusion of each game it'll ask if they'd like to play again
+          private Puzzle puzzle = new Puzzle();
               while(true){ /// here we loop the steps of the game with the functions we have called from the other classes and functions we have written
               GetInputs();
               puzzle.GetGuesses(playerGuess);
@@ -91,7 +92,7 @@ namespace cse210_jumper.game{
     
         private void ContinueGame() /// Here we get our answer to the prompt if they want to play again and if they do then the game loops or breaks the code.
      {
-            terminal. DisplayContinue()
+            terminal. DisplayContinue();
 
         
 
