@@ -39,14 +39,13 @@ using System;
         /// </summary>
         /// <param name="newWord"></param>
         /// <returns>list of characters made from the word</returns>
-        public List<char> LettersNeeded()
+        public List<char> LettersNeeded(string newWord)
         {
             
 
             for (int i = 0; i < newWord.Length; i++)
             {
                 wordLetters.Add(newWord[i]);
-                Console.WriteLine(wordLetters[i]);
             }
             
             return wordLetters;
@@ -59,10 +58,9 @@ using System;
         /// </summary>
         /// <param name="wordLetters"></param>
         /// <returns>the index number(s) of the letter guess if correct</returns>
-        public List<int> GetGuesses(playerGuess)
+        public List<int> GetGuesses(char guess)
         {
-            public string lettersGuessed = playerGuess;
-            int letNum = (int) lettersGuessed % 32;
+            int letNum = (int) guess % 32;
             List<int> correctGuess = new List<int>();
 
             for (int i = 0; i < wordLetters.Count; i++ )

@@ -10,15 +10,15 @@ namespace cse210_jumper.game{
         private string turnPrompt = "Guess a letter [a-z]: ";
         private string continuePrompt = "Would you like to play again? [y/n] ";
         private string ground = "^^^^^^^";
-        private string liveJumper = "  0 \n/|\\ \n/ \\";
-        private string deadJumper = "  x \n/|\\ \n/ \\";
+        private string liveJumper = "   0 \n  /|\\ \n  / \\";
+        private string deadJumper = "   x \n  /|\\ \n  / \\";
         private string hasLoser = "You missed too many guesses! You lose!";
-        private string winnerPrompt = "You guess the word! Great job, you win!";
-        private string chuteLayer01 = " ___";
-        private string chuteLayer02 = "/   \\";
-        private string chuteLayer03 = "=====";
-        private string chuteLayer04 = "\\   /";
-        private string chuteLayer05 = " \\ /";
+        private string winnerPrompt = "You guessed the word! Great job, you win!";
+        private string chuteLayer01 = "  ___";
+        private string chuteLayer02 = " /   \\";
+        private string chuteLayer03 = " =====";
+        private string chuteLayer04 = " \\   /";
+        private string chuteLayer05 = "  \\ /";
 
 
         /// <summary>
@@ -29,11 +29,10 @@ namespace cse210_jumper.game{
         }
 
         /// <summary>
-        /// Displays the prompt for the user to guess the letter and a blank line
+        /// Displays the prompt for the user to guess the letter
         /// </summary>
         public void DisplayPrompt(){
-            Console.WriteLine(turnPrompt);
-            Console.WriteLine("");
+            Console.Write(turnPrompt);
         }
 
         /// <summary>
@@ -41,8 +40,8 @@ namespace cse210_jumper.game{
         /// </summary>
         /// <param name="jumper">The instance of jumper from the Director class</param>
         public void DisplayStatus(Jumper jumper){
-            foreach (string i in jumper.GetStatus()){
-                if (i == "_"){
+            foreach (char i in jumper.GetStatus()){
+                if (i == '_'){
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write(i);
                     Console.ForegroundColor = ConsoleColor.White; //set back to white
@@ -150,7 +149,7 @@ namespace cse210_jumper.game{
         /// Displays the play again (aka continue) prompt text
         /// </summary>
         public void DisplayContinue(){
-            Console.WriteLine(continuePrompt);
+            Console.Write(continuePrompt);
         }
     }
 }
