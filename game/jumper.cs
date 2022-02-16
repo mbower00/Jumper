@@ -10,6 +10,7 @@ namespace cse210_jumper.game{
         private string newWord = ""; 
         private List<char> chars = new List<char>();
         private List<int> correctIndexes = new List<int>();
+        private bool isCorrectGuess;
 // ----------------------------------------------------------------------------------------------------------
         
         
@@ -40,17 +41,16 @@ namespace cse210_jumper.game{
         /// <param name="puzzle">puzzle instance from director</param>
         public void SetCurrentStatus(char guess, Puzzle puzzle){  // letters in Current status = underlines
             correctIndexes = puzzle.GetGuesses(guess);
-
-            if (correctIndexes[0] != -1){ //if correct
-                for (int i = 0; i < correctIndexes.Count; i++ ){
+            isCorrectGuess = false;
+            for (int i = 0; i < correctIndexes.Count; i++ ){
+                if (correctIndexes[i] != -1){
                     currentStatus[i] = guess;
+                    isCorrectGuess = true;
                 }
-            }      
-            else{
-                chuteDamage++;
             }
-            
-            
+            if (!isCorrectGuess){
+                chuteDamage ++;
+            }
         }
 
 
